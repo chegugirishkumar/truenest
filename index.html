@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head></head>
+
+<body class="bg-background text-on-surface font-body-md">
+
+
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TrueNest | Truly In Nature</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Metropolis:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="assets/js/tailwind.config.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blueprint-line {
+            height: 1px;
+            background-color: #cec5ba;
+            position: relative;
+        }
+
+        .blueprint-line::after {
+            content: 'TN-0824';
+            position: absolute;
+            right: 0;
+            top: 4px;
+            font-family: 'Metropolis';
+            font-size: 10px;
+            color: #7d766c;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #project-carousel-track {
+            display: grid;
+        }
+
+        .carousel-slide {
+            grid-area: 1 / 1;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.6s ease, visibility 10s ease;
+        }
+
+        .carousel-slide.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes scroll-hint {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(200%);
+            }
+        }
+
+        .animate-scroll-hint {
+            animation: scroll-hint 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+
+        .scroll-hint-line {
+            clip-path: polygon(0 0, 100% 0, 65% 100%, 35% 100%);
+        }
+    </style>
+    <!-- Shared Header Placeholder -->
+    <div id="shared-header"></div>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden flex items-center px-margin-mobile md:px-margin-desktop">
+        <div class="absolute inset-0 z-0">
+            <!-- <div class="absolute inset-0 bg-on-background/40 z-10"></div> -->
+            <video id="hero-video" autoplay muted playsinline loop class="w-full h-full object-cover"
+                src="assets/images/hero-fog.mp4">
+            </video>
+        </div>
+        <div class="relative z-20 max-w-4xl mt-32 md:mt-48">
+            <!-- <p class="font-label-caps text-label-caps text-primary-fixed mb-4 tracking-[0.2em]">TRUENEST • BANGALORE</p> -->
+            <h1 class="font-display-xl text-display-xl text-white mb-8">Truly In <br /><span
+                    class="italic">Nature.</span></h1>
+            <button onclick="window.location.href='projects.html'"
+                class="px-10 py-5 bg-white text-on-background font-label-caps text-label-caps hover:bg-primary-fixed transition-colors">EXPLORE
+                RESIDENCES</button>
+        </div>
+        <div class="absolute bottom-12 right-margin-desktop hidden md:block">
+            <!-- <div class="blueprint-line w-64 mb-2"></div>
+<p class="font-label-caps text-[10px] text-white/60">TR-01 — THE FOREST ENTRANCE PERSPECTIVE</p> -->
+        </div>
+        <!-- Scroll Hint -->
+        <div
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 text-white/80 pointer-events-none">
+            <span class="font-label-caps text-[11px] tracking-[0.15em]">SCROLL</span>
+            <span class="scroll-hint-line block w-[2px] h-10 overflow-hidden relative">
+                <span class="absolute inset-0 bg-white/60"></span>
+                <span class="absolute top-0 left-0 w-full h-1/2 bg-white animate-scroll-hint"></span>
+            </span>
+        </div>
+    </section>
+    <!-- Featured Projects Carousel Section -->
+    <section class="bg-surface-container-low overflow-hidden py-16" id="projects">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+            <div class="flex justify-between items-end mb-10 mt-12 md:mt-20">
+                <div>
+                    <h2 class="font-headline-xl text-primary text-headline-lg">Curated Sanctuaries...</h2>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-on-background hover:text-white transition-all cursor-pointer"
+                        id="carousel-prev">
+                        <span class="material-symbols-outlined">west</span>
+                    </button>
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-on-background hover:text-white transition-all cursor-pointer"
+                        id="carousel-next">
+                        <span class="material-symbols-outlined">east</span>
+                    </button>
+                </div>
+            </div>
+            <div class="relative overflow-hidden w-full">
+                <div class="flex gap-0" id="project-carousel-track">
+                    <!-- Project 1 -->
+                    <div class="carousel-slide">
+                        <div
+                            class="group grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-0">
+                            <!-- Image 60% -->
+                            <div class="md:col-span-3 relative aspect-[4/3] md:aspect-auto md:min-h-[460px] overflow-hidden rounded-3xl">
+                                <img alt="Modern architectural building Retreat 76"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="./assets/images/retreat-76.png" />
+                            </div>
+                            <!-- Details 40% -->
+                            <div class="md:col-span-2 flex flex-col justify-between p-8 md:p-10 lg:p-12 bg-surface-container-low rounded-3xl md:rounded-l-none border border-outline/10 md:border-l-0">
+                                <div>
+                                    <p class="font-label-caps text-[12px] text-primary tracking-widest mb-3">NANDI HILLS SUNSET LOOK</p>
+                                    <h3 class="font-headline-xl text-headline-lg mb-6">Retreat 76</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                        A sunset-facing sanctuary perched on the western ridge of Nandi Hills — 76 private residences set into the contour of the land, oriented toward the long, slow dusk.
+                                    </p>
+                                    <div class="grid grid-cols-2 gap-4 mb-8">
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">RESIDENCES</p>
+                                            <p class="font-body-md text-body-md">76</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">ALTITUDE</p>
+                                            <p class="font-body-md text-body-md">915 m</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">STATUS</p>
+                                            <p class="font-body-md text-body-md">Coming Soon</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">LAND</p>
+                                            <p class="font-body-md text-body-md">16,800 SFT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="flex items-center gap-3 group/btn self-start">
+                                    <span class="font-label-caps text-label-caps">EXPLORE PROJECT</span>
+                                    <span class="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-x-1">arrow_outward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="carousel-slide">
+                        <div
+                            class="group grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-0">
+                            <!-- Image 60% -->
+                            <div class="md:col-span-3 relative aspect-[4/3] md:aspect-auto md:min-h-[460px] overflow-hidden rounded-3xl">
+                                <img alt="Modern estate Hills and Skies"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="assets/images/interior-lounge.jpg" />
+                            </div>
+                            <!-- Details 40% -->
+                            <div class="md:col-span-2 flex flex-col justify-between p-8 md:p-10 lg:p-12 bg-surface-container-low rounded-3xl md:rounded-l-none border border-outline/10 md:border-l-0">
+                                <div>
+                                    <p class="font-label-caps text-[12px] text-primary tracking-widest mb-3">NANDI HILLS LOOK</p>
+                                    <h3 class="font-headline-xl text-headline-lg mb-6">Hills & Skies</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                        A horizon-line estate where architecture dissolves into landscape. Crafted for the stillness of early mornings and the quiet majesty of the western sky.
+                                    </p>
+                                    <div class="grid grid-cols-2 gap-4 mb-8">
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">RESIDENCES</p>
+                                            <p class="font-body-md text-body-md">32</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">ALTITUDE</p>
+                                            <p class="font-body-md text-body-md">915 m</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">STATUS</p>
+                                            <p class="font-body-md text-body-md">Coming Soon</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">LAND</p>
+                                            <p class="font-body-md text-body-md">8000 SFT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="flex items-center gap-3 group/btn self-start">
+                                    <span class="font-label-caps text-label-caps">EXPLORE PROJECT</span>
+                                    <span class="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-x-1">arrow_outward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination Dots -->
+                <div class="flex justify-center gap-2 mt-8">
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-primary transition-all duration-300"></div>
+                    <div class="carousel-dot w-2 h-2 rounded-full bg-outline/30 transition-all duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Brand Philosophy -->
+    <section
+        class="py-section-gap bg-white px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-6 relative">
+                <div class="aspect-square bg-surface-container-highest overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A minimalist interior space with a focus on negative space and high-end materials. A single bespoke charcoal chair sits against a vast sandstone-textured wall."
+                        src="assets/images/minimal-interior.jpg" />
+                </div>
+            </div>
+            <div class="md:col-start-8 md:col-span-5 pt-12 md:pt-0">
+                <p class="font-label-caps text-label-caps text-primary mb-6">OUR PHILOSOPHY</p>
+                <h2 class="font-display-lg text-display-lg mb-8 leading-tight">The Art of <span
+                        class="italic">Subtraction.</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    In a city that never stops, TrueNest provides the silence. Truly In Nature isn't just a location;
+                    it's a design language. We remove the unnecessary, focusing on light, volume, and natural
+                    materiality to create spaces that breathe.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer Placeholder -->
+    <div id="shared-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/components.js"></script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Carousel Logic
+            const track = document.getElementById('project-carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const nextBtn = document.getElementById('carousel-next');
+            const prevBtn = document.getElementById('carousel-prev');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            if (!track || !nextBtn || !prevBtn) return;
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('is-active', index === currentIndex);
+                });
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('bg-primary', index === currentIndex);
+                    dot.classList.toggle('bg-outline/30', index !== currentIndex);
+                });
+            }
+
+            // Initialize first slide as active
+            updateCarousel();
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel();
+            }
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoSlide();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoSlide();
+            });
+
+            // Auto slide
+            const AUTO_SLIDE_MS = 8000;
+            let autoSlide = setInterval(nextSlide, AUTO_SLIDE_MS);
+
+            function resetAutoSlide() {
+                clearInterval(autoSlide);
+                autoSlide = setInterval(nextSlide, AUTO_SLIDE_MS);
+            }
+
+            // Hero Video Smart Auto-Playlist
+            const heroVideo = document.getElementById('hero-video');
+            const videoBase = 'assets/hero-videos/';
+            let currentTrack = 1;
+            let hasLocalVideos = false;
+
+            if (heroVideo) {
+                const playTrack = (index) => {
+                    heroVideo.src = `${videoBase}${index}.mp4`;
+                    heroVideo.load();
+                    heroVideo.play().catch(() => {
+                        // If it fails, jump back to 1
+                        if (index > 1) {
+                            currentTrack = 1;
+                            playTrack(1);
+                        }
+                    });
+                };
+
+                // If a video fails to load, it means we've hit the end of the folder
+                heroVideo.addEventListener('error', (e) => {
+                    if (hasLocalVideos && currentTrack > 1) {
+                        currentTrack = 1;
+                        playTrack(1);
+                    }
+                }, true);
+
+                heroVideo.addEventListener('ended', () => {
+                    if (hasLocalVideos) {
+                        currentTrack++;
+                        playTrack(currentTrack);
+                    }
+                });
+
+                // Check if 1.mp4 exists at the very start
+                const checkFirstVideo = new Image(); // Using a trick to check file existence
+                fetch(`${videoBase}1.mp4`, { method: 'HEAD' }).then(res => {
+                    if (res.ok) {
+                        hasLocalVideos = true;
+                        heroVideo.loop = false; // Disable native loop to allow playlist logic
+                        playTrack(1);
+                    }
+                }).catch(() => {
+                    // Stay on default mixkit video with native loop
+                    heroVideo.loop = true;
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

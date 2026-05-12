@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Metropolis:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blueprint-divider {
+            height: 1px;
+            background-color: rgba(194, 178, 128, 0.3);
+        }
+    </style>
+    <script src="assets/js/tailwind.config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-primary">
+    <!-- Shared Header Placeholder -->
+    <div id="shared-header"></div>
+
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <header class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+            <div class="max-w-4xl">
+                <!-- <div class="flex items-center gap-4 mb-6">
+                    <div class="blueprint-divider w-12"></div>
+                </div> -->
+                <h1 class="font-display-lg text-display-xl md:text-display-lg text-primary leading-tight mb-8">
+                    Portfolio of Persistent Elegance
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    A collection of architectural milestones where brutalist honesty meets the quietude of high-end
+                    living. Each structure is a dialogue between Bangalore's urban rhythm and the serenity of nature.
+                </p>
+            </div>
+        </header>
+        <!-- Vertical Editorial Gallery -->
+        <section class="px-margin-mobile md:px-margin-desktop space-y-section-gap pb-section-gap">
+            <!-- Project 01: Retreat 76 -->
+            <article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center md:min-h-[calc(95vh-8rem)] md:max-h-[95vh]">
+                <div class="md:col-span-7 relative group overflow-hidden md:h-[calc(95vh-8rem)] md:max-h-[722px]">
+                    <img alt="Retreat 76 Nandi Hills"
+                        class="w-full h-full aspect-[4/5] md:aspect-auto object-cover filter transition-all duration-700 ease-in-out"
+                        data-alt="High-end, full-color architectural photography of a modern, brutalist-inspired residential building with integrated vertical orchards and lush greenery. The style should be 'Quiet Luxury' with warm sunset lighting, natural textures like concrete and wood, and a clear view of Bangalore's urban greenery in the background. Professional, realistic, and sophisticated."
+                        src="assets/images/retreat76-elevation.jpg" />
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 bg-surface/40 backdrop-blur-xl border-t border-outline/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="font-label-caps text-label-caps text-primary mb-2 block">STATUS:
+                                    COMING SOON...</span>
+                                <h3 class="font-headline-lg text-headline-lg text-on-surface">The Flagship Residency
+                                </h3>
+                            </div>
+                            <span class="material-symbols-outlined text-primary text-3xl">north_east</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 md:pl-12">
+                    <h2 class="font-headline-xl text-headline-xl text-primary mb-6">Retreat 76</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Perched on the serene slopes of Nandi Hills, Retreat 76 redefines the service apartment
+                        experience. Monolithic concrete forms are softened by indigenous flora, creating a sanctuary
+                        that feels carved from the mountain itself.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 border-transparent">
+                            <span class="font-label-caps text-label-caps text-outline">LOCATION</span>
+                            <span class="font-body-md text-body-md text-on-surface">Nandi Hills, KA</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 border-transparent">
+                            <span class="font-label-caps text-label-caps text-outline">BIOPHILIC HALLMARK</span>
+                            <span class="font-body-md text-body-md text-on-surface">Integrated Vertical Orchards</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 border-transparent">
+                            <span class="font-label-caps text-label-caps text-outline">COORDINATES</span>
+                            <a href="https://www.google.com/maps/search/?api=1&query=13.3979,77.6918" target="_blank"
+                                rel="noopener noreferrer" title="Open in Google Maps"
+                                class="group/link inline-flex items-center gap-1.5 font-body-md text-body-md text-primary transition-colors">
+                                <span class="material-symbols-outlined text-base no-underline">location_on</span>
+                                <span class="underline underline-offset-4 decoration-primary/40 group-hover/link:decoration-primary">13.3979° N, 77.6918° E</span>
+                                <span
+                                    class="material-symbols-outlined text-sm no-underline transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5">arrow_outward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="retreat76.html" class="mt-12 inline-flex items-center gap-3 group text-primary hover:text-primary/80 transition-colors">
+                        <span class="font-label-caps text-label-caps">EXPLORE</span>
+                        <span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5">arrow_outward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Project 02: Hills and Skies -->
+            <article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center flex-row-reverse md:min-h-[calc(95vh-8rem)] md:max-h-[95vh]">
+                <div class="md:col-span-5 md:pr-12 order-2 md:order-1">
+                    <h2 class="font-headline-xl text-headline-xl text-primary mb-6">Hills & Skies</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        A residential enclave that dissolves the boundaries between indoor and outdoor living. The
+                        design features expansive cantilevered terraces that offer panoramic views of Bangalore’s
+                        changing horizon.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 border-transparent">
+                            <span class="font-label-caps text-label-caps text-outline">LOCATION</span>
+                            <span class="font-body-md text-body-md text-on-surface">Nandi Hills, KA</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 border-transparent"><span
+                                class="font-label-caps text-label-caps text-outline">BIOPHILIC HALLMARK</span><span
+                                class="font-body-md text-body-md text-on-surface">Integrated Vertical Orchards</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 border-transparent">
+                            <span class="font-label-caps text-label-caps text-outline">COORDINATES</span>
+                            <a href="https://www.google.com/maps/search/?api=1&query=13.397393,77.690496" target="_blank"
+                                rel="noopener noreferrer" title="Open in Google Maps"
+                                class="group/link inline-flex items-center gap-1.5 font-body-md text-body-md text-primary transition-colors">
+                                <span class="material-symbols-outlined text-base no-underline">location_on</span>
+                                <span class="underline underline-offset-4 decoration-primary/40 group-hover/link:decoration-primary">13.397393° N, 77.690496° E</span>
+                                <span
+                                    class="material-symbols-outlined text-sm no-underline transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5">arrow_outward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="hillsandskies.html" class="mt-12 inline-flex items-center gap-3 group text-primary hover:text-primary/80 transition-colors">
+                        <span class="font-label-caps text-label-caps">EXPLORE</span>
+                        <span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5">arrow_outward</span>
+                    </a>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2 relative group overflow-hidden md:h-[calc(95vh-8rem)] md:max-h-[722px]">
+                    <img alt="Hills and Skies Architecture"
+                        class="w-full h-full aspect-[4/5] md:aspect-auto object-cover filter transition-all duration-700 ease-in-out"
+                        data-alt="High-end, full-color architectural photography of a modern luxury villa with expansive cantilevered terraces and floor-to-ceiling glass walls. The setting is a lush, green landscape in Sahakar Nagar, Bangalore. The lighting is soft and natural, emphasizing the 'Truly In Nature' brand philosophy. Professional, high-fidelity real estate photography."
+                        src="assets/images/hillsandskies-elevation.jpg" />
+                </div>
+            </article>
+            <!-- Project 03: The Courtyard (Bento Style Sub-section) -->
+        </section>
+        <!-- Why Nandi Hills? Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+            id="nandi-hills">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 mb-12 md:mb-0">
+                    <p class="font-label-caps text-label-caps text-primary mb-6">THE GEOGRAPHY OF WELLNESS</p>
+                    <h2 class="font-display-lg text-display-lg mb-8">Why Nandi <span class="italic">Hills?</span></h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="font-label-caps text-label-caps text-on-surface mb-2">BLUE ZONE MICROCLIMATE</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Inspired by global 'Blue Zone'
+                                research on longevity, Nandi Hills offers a unique microclimate where the air quality
+                                index consistently remains at pristine levels, fostering a life of vitality.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps text-on-surface mb-2">HISTORICAL GRANDEUR</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Proximity to the historic Tipu
+                                Sultan’s Summer Residence reminds us that this landscape has been a sanctuary for
+                                royalty for centuries.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps text-on-surface mb-2">THERAPEUTIC ALTITUDE</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">At 1,478 meters above sea
+                                level, the cooler temperatures and reduced humidity create a natural refuge from the
+                                urban heat island.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-start-7 md:col-span-6">
+                    <div class="relative aspect-square">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                            data-alt="A misty, ethereal view of Nandi Hills at sunrise, showing the undulating peaks and lush greenery partially covered by low-hanging clouds."
+                            src="assets/images/nandi-hills-mist.jpg" />
+                        <div
+                            class="absolute -top-6 -left-6 bg-primary-container p-6 w-32 h-32 flex flex-col justify-center items-center text-center">
+                            <span class="font-headline-lg text-[32px] text-primary">0%</span>
+                            <p class="font-label-caps text-[8px] leading-tight">POLLUTION INDEX REACHED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shared Footer Placeholder -->
+        <div id="shared-footer"></div>
+    </main>
+
+    <script src="assets/js/components.js"></script>
+
+
+
+</body>
+
+</html>

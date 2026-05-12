@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Metropolis:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-divider {
+            height: 1px;
+            background-color: #C2B280;
+            opacity: 0.3;
+            position: relative;
+        }
+        .blueprint-divider::after {
+            content: "TN-CR-024";
+            position: absolute;
+            right: 0;
+            top: 4px;
+            font-family: 'Metropolis', sans-serif;
+            font-size: 10px;
+            color: #685d4a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-primary">
+<!-- TopNavBar -->
+    <!-- Shared Header Placeholder -->
+    <div id="shared-header"></div>
+
+<!-- Hero Section -->
+<header class="pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase mb-4 block">Confidential Enquiries</span>
+<h1 class="font-display-lg text-display-lg md:text-display-xl text-on-surface leading-tight mb-8">
+                    An ecosystem of <span class="italic">absolute discretion</span> and enduring craftsmanship.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">For those who seek more than a residence—an acquisition of legacy. Our private advisory team facilitates seamless transitions into the city's most exclusive architectural landmarks.</p>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-section-gap pb-section-gap">
+<!-- Form and Image Asymmetric Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Inquiry Form -->
+<div class="lg:col-span-5 bg-surface-container-low p-8 md:p-12 border border-outline/10">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Private Acquisition Inquiry</h2>
+<form class="space-y-12">
+<div class="group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-all font-body-md text-body-md" placeholder="Your formal name" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Contact Preference</label>
+<div class="flex gap-8 py-4">
+<label class="flex items-center gap-2 cursor-pointer font-body-md text-body-md">
+<input class="text-primary focus:ring-primary border-outline" name="pref" type="radio"/> Encrypted Email
+                            </label>
+<label class="flex items-center gap-2 cursor-pointer font-body-md text-body-md">
+<input class="text-primary focus:ring-primary border-outline" name="pref" type="radio"/> Private Call
+                            </label>
+</div>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Portfolio Interest</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md appearance-none">
+<option>Urban Penthouse Collection</option>
+<option>Garden Estate Residences</option>
+<option>Commercial Headquarters</option>
+<option>Private Asset Management</option>
+</select>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Specific Requirements</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md resize-none" placeholder="Detail your specific privacy or structural needs..." rows="4"></textarea>
+</div>
+<button class="w-full py-6 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest hover:bg-on-surface-variant transition-all flex justify-between items-center px-8 group">
+                        Inquire Privately
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Brutalist Image Composition -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<div class="relative h-[600px] overflow-hidden">
+<img alt="Luxury Interior" class="w-full h-full object-cover" data-alt="A hyper-minimalist luxury interior with vast floor-to-ceiling glass windows overlooking a serene, sun-drenched private garden. The room features a monolithic stone pillar and a single designer lounge chair in charcoal leather. The lighting is soft and atmospheric, highlighting the natural textures of sand-colored travertine floors. The overall aesthetic is one of quiet luxury, absolute privacy, and sophisticated architectural grandeur." src="assets/images/luxury-interior.jpg"/>
+<div class="absolute inset-0 border-[24px] border-surface/20 pointer-events-none"></div>
+</div>
+<div class="blueprint-divider my-4"></div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="space-y-4">
+<h3 class="font-label-caps text-label-caps text-primary">Lavelle Road HQ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            No. 42, Heritage Wing<br/>
+                            Lavelle Road, Bangalore 560001<br/>
+                            By Appointment Only.
+                        </p>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-caps text-label-caps text-primary">Direct Access</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            hello@truenest.co.in<br/>
+                            +91 80 4455 9900<br/></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Concierge Tiers (Bento Grid) -->
+<section>
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">The Acquisition Experience</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-high p-10 flex flex-col justify-between aspect-[4/5] border border-outline/5 hover:border-primary/20 transition-all">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="lock">lock</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Privacy Custody</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Non-disclosure protocols for all site visits and negotiations. We manage the identity of your investment with absolute vigilance.</p>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary self-start py-1" href="#">Learn More</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-primary text-on-primary p-10 flex flex-col justify-between aspect-[4/5] shadow-2xl">
+<div>
+<span class="material-symbols-outlined text-4xl mb-8" data-icon="architecture">architecture</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Structural Bespoke</h3>
+<p class="font-body-md text-body-md opacity-80">Direct access to our lead architects for pre-acquisition structural modifications and interior customization during the build phase.</p>
+</div>
+<a class="font-label-caps text-label-caps text-on-primary border-b border-on-primary self-start py-1" href="#">View Services</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-high p-10 flex flex-col justify-between aspect-[4/5] border border-outline/5 hover:border-primary/20 transition-all">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="concierge_bell">doorbell</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Lifestyle Curation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Post-acquisition management including landscape maintenance, private security integration, and specialized art installation.</p>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary self-start py-1" href="#">Request Catalog</a>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+</main>
+    <!-- Shared Footer Placeholder -->
+    <div id="shared-footer"></div>
+</main>
+
+<script src="assets/js/components.js"></script>
+
+
+
+</body>
+
+</html>
